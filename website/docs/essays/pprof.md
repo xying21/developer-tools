@@ -3,7 +3,11 @@ id: pprof
 title: Tips for profiling CKB script
 ---
 
-Before starting, make sure you have understood the concept of [cycles](basics/glossary#cycles).
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
+import Link from "@docusaurus/Link";
+
+Before starting, make sure you have understood the concept of <Link to={useBaseUrl('/docs/basics/glossary#cycles')}>cycles</Link>.
 
 In the development phase of dapps, it is a wide range of needs to estimate how many cycles our dapp will consume.
 

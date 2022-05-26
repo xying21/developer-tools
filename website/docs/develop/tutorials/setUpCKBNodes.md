@@ -1,95 +1,13 @@
 ---
-id: setupsystem
-title: Set Up the Development Environment
+id: setupCKBNodes
+title: Set Up and Manage CKB Nodes by Using Tippy
 ---
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
 import Link from "@docusaurus/Link";
 
-This guide will help you set up your system for building DApps with Lumos. If you already have everything installed, feel free to read the other guides, and walk through the examples to learn the usage of Lumos.
-
-## System Requirements
-
-- Operating System:  CKB DApps can be developed upon Lumos on all major platforms, including Linux, Windows, and macOS.
-- JavaScript runtime environment: [Node.js](https://nodejs.org/en/download/) LTS Version (>=12)
-- Development tools to build native addons: GCC and make
-- JavaScript package manager: Yarn or npm
-
-## Install Node.js
-
-Node.js is the runtime environment that must be installed on the system before using Lumos. The following sections explain the easiest way to install the Long Term Supported (LTS) version of Node.js on Ubuntu Linux 20.04, macOS, and Windows 10.
-
-<Tabs
-  defaultValue="ubuntu"
-  values={[
-    {label: 'Ubuntu 20.04', value: 'ubuntu'},
-    {label: 'macOS and Windows 10', value: 'macoswin'},
-  ]}>
-<TabItem value="ubuntu"><p>Install Node.js with Apt by Using a NodeSource PPA:</p><p>The following commands installs Node.js 14.x.</p>
-
-```bash
-$ curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
-$ sudo apt install nodejs
-```
-
-</TabItem>
-    <TabItem value="macoswin">Download and install <a href="https://nodejs.org/en/">the LTS version</a> that is Recommended For Most Users.
-</TabItem>
-</Tabs>
-
-## Install Yarn
-
-It is recommended to install Yarn through the NPM package manager, which comes bundled with [Node.js](https://nodejs.org/) when it is installed on the system.
-
-To install Yarn through NPM:
-
-```bash
-npm install --global yarn
-```
-
-## Install Dependencies for node-gyp
-
-Lumos relies on **node-gyp**, a cross-platform command-line tool for compiling native addon modules for *Node*.js. 
-
-node-gyp has a few additional system requirements and dependencies that have different installation steps on different operating systems.
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-
-<Tabs
-  defaultValue="ubuntu"
-  values={[
-    {label: 'Ubuntu 20.04', value: 'ubuntu'},
-    {label: 'macOS', value: 'macos'},
-    {label: 'Windows 10', value: 'windows'},
-  ]}>
-    <TabItem value="ubuntu">The development dependencies for Ubuntu 20.04 LTS are as follows:<ul><li>Python v3.6, v3.7, v3.8, or v3.9 (Ubuntu 20.04 and other versions of Debian Linux ship with Python 3 pre-installed)</li><li>make</li><li>A proper C/C++ compiler toolchain, like <a href="https://gcc.gnu.org/">GCC</a></li></ul><p>To install <code>GCC</code> and <code>make</code> on Ubuntu 20.04, run the following command as root or user with sudo privileges:</p>
-
-```
-$ sudo apt update
-$ sudo apt install build-essential
-```
-
-</TabItem>
-
-<TabItem value="macos">The development dependencies for macOS are as follows:<ul><li>Python v3.6, v3.7, v3.8, or v3.9</li><li><a href="https://developer.apple.com/xcode/download/">Xcode</a> and Xcode command line tools</li></ul>
-
-</TabItem>
-
- <TabItem value="windows">The development dependencies for Windows are as follows:<ul><li>The current version of Python.</li><li>Visual C++ Build Environment</li></ul><b>Installation Options</b>
-
-<ul><li>Option 1: Install all the required tools and configurations using Microsoft's windows-build-tools by running <code>npm install -g windows-build-tools -vs2019</code> from an elevated PowerShell (run as Administrator).<p><b>Note</b>: This command installs all the system dependencies without conflicting with any software already installed on the system. Depending on the build tools' version, the installation requires 3 to 8 gigabytes space to get all dependencies installed. It can take at least 30 minutes depending on the network connection.</p></li><li>Option 2: Install dependencies and configure the tools manually.<ul><li>Install Visual C++ Build Environment: Tools for Visual Studio 2019 -> <a href="https://visualstudio.microsoft.com/downloads/"><i class="feather icon-download"></i>Visual Studio 2019 Build Tools</a> (using "Visual C++ build tools" workload) and run <code>npm config set msvs_version 2019</code> in a cmd terminal.</li><li>Install the current version of Python from the <a href="https://docs.python.org/3/using/windows.html#the-microsoft-store-package">Microsoft Store package</a>, and run <code>npm config set python /path/to/python</code>.</li></ul></li></ul>
-
-</TabItem>
-
-</Tabs>
-For more information, see the instructions of <a href="https://github.com/nodejs/node-gyp">node-gyp</a>.
-
-## Install a CKB Node on DEV Chain by Using Tippy
-
-**Tippy** is a tool to help set up and manage CKB nodes. It can install and start running a CKB node by one simple click. **DEV chain** is the recommended network for the later examples and CKB starters. 
-
-For more information about the concepts of CKB nodes, CKB networks, and the methods to install a CKB node, see <Link to={useBaseUrl('/docs/reference/ckbnode')}>CKB Nodes and Networks</Link>.
 
 <Tabs
   defaultValue="ubuntu"
@@ -114,16 +32,30 @@ $ ./Tippy
 
 <p>A web page on <a>http://localhost:5000/Home</a> will be opened in a browser after the execution or the double click. If the page is not opened, open the browser and type <a>http://localhost:5000/Home</a> in the address field to access the Tippy web UI.</p>
 
-<p><b>Step 3. Create a CKB node on DEV chain.</b></p>
+<p><b>Step 3. Create a CKB chain.</b></p>
 
-<p><b>DEV chain</b> is the recommended network for the later examples and CKB starters. For more information about CKB networks, see <Link to={useBaseUrl('/docs/reference/ckbnode#ckb-networks')}>CKB Networks</Link>.</p>
+<p><b>DEV chain</b> is the recommended network for the later examples and CKB starters. For more information about CKB networks, see <Link to={useBaseUrl('/docs/basics/concepts/ckbNetworks')}>CKB Networks</Link>.</p>
 <p>To create a CKB node on <b>DEV chain</b>, click the <b>Launch a CKB devnet instantly</b> button on the home page.</p>
 
 <img src={useBaseUrl("img/tools/tippycreate.png")}/>
 
+<p>To create a CKB node on the <b>other</b> networks, click <b>Create a customized chain</b> to choose the network in the <b>Chain Type</b> dropdown list of the <b>Create Chain</b> form.</p>
+
 <p>The CKB node starts running just after it is created. It can be stopped or restarted on the Tippy <b>Dashboard</b>. Details of blocks and transactions of the chain can be checked on the <b>Blocks</b> and <b>Transactions</b> pages that are visible when the node is started.</p>
 
 <b>Step 4. Shorten DEV chain epoch and block interval.</b>
+
+<p>An epoch is a period of time for a set of blocks. To develop and test transactions with lock period like DAO operations, the <code>genesis_epoch_length</code> and the <code>permanent_difficulty_in_dummy</code> parameters in the <b>dev.toml</b> file can be adjusted to shorten the chain epoch.</p>
+
+<p>The default value for the <code>genesis_epoch_length</code> parameter is 1000 meaning that an epoch is the time for producing 1,000 blocks.</p>
+
+<p>When <code>permanent_difficulty_in_dummy</code> is set to <var>true</var>, all epochs skip the difficulty adjustment. This parameter is typically used in combination with <code>genesis_epoch_length</code>.</p>
+
+:::info
+
+The chain specific configuration files like dev.toml and data files are located in Home/.config/Tippy/chain-<var>number</var>.
+
+:::
 
 <p>To shorten DEV chain epoch and block interval:</p>
 
@@ -137,6 +69,8 @@ permanent_difficulty_in_dummy = true
 ```
 
 </li><li><p>Modify the value for <code>value</code> under the <code>miner.workers</code> section  in the <b>ckb-miner.toml</b> file.</p>
+
+<p>The default mining interval is 5,000 milliseconds (5 seconds). That means a new block is generated at intervals of every 5 seconds.</p>
 
 <p>To modify the value in the [miner.workers] section to generate a new block every second (1,000 milliseconds):</p>
 
@@ -159,15 +93,24 @@ value = 1000
 
 <p>A web page on <a>http://localhost:5000/Home</a> will be opened in a browser after the execution or the double click. If the page is not opened, open the browser and type <a>http://localhost:5000/Home</a> in the address field to access the Tippy web UI.</p>
 
-<p><b>Step 3. Create a CKB node on DEV chain.</b></p>
+<p><b>Step 3. Create a CKB chain.</b></p>
 
+<p><b>DEV chain</b> is the recommended network for the later examples and CKB starters. For more information about CKB networks, see <Link to={useBaseUrl('/docs/basics/concepts/ckbNetworks')}>CKB Networks</Link>.</p>
 <p>To create a CKB node on <b>DEV chain</b>, click the <b>Launch a CKB devnet instantly</b> button on the home page.</p>
 
 <img src={useBaseUrl("img/tools/tippycreate.png")}/>
 
+<p>To create a CKB node on the <b>other</b> networks, click <b>Create a customized chain</b> to choose the network in the <b>Chain Type</b> dropdown list of the <b>Create Chain</b> form.</p>
+
 <p>The CKB node starts running just after it is created. It can be stopped or restarted on the Dashboard. Details of blocks and transactions of the chain can be checked on the Blocks and Transaction pages.</p>
 
 <b>Step 4. Shorten DEV chain epoch and block interval.</b>
+
+<p>An epoch is a period of time for a set of blocks. To develop and test transactions with lock period like DAO operations, the <code>genesis_epoch_length</code> and the <code>permanent_difficulty_in_dummy</code> parameters in the <b>dev.toml</b> file can be adjusted to shorten the chain epoch.</p>
+
+<p>The default value for the <code>genesis_epoch_length</code> parameter is 1000 meaning that an epoch is the time for producing 1,000 blocks.</p>
+
+<p>When <code>permanent_difficulty_in_dummy</code> is set to <var>true</var>, all epochs skip the difficulty adjustment. This parameter is typically used in combination with <code>genesis_epoch_length</code>.</p>
 
 <p>To shorten DEV chain epoch and block interval:</p>
 
@@ -181,6 +124,8 @@ permanent_difficulty_in_dummy = true
 ```
 
 </li><li><p>Modify the value for <code>value</code> under the <code>miner.workers</code> section  in the <b>ckb-miner.toml</b> file.</p>
+
+<p>The default mining interval is 5,000 milliseconds (5 seconds). That means a new block is generated at intervals of every 5 seconds.</p>
 
 <p>To modify the value in the [miner.workers] section to generate a new block every second (1,000 milliseconds):</p>
 
@@ -204,13 +149,28 @@ value = 1000
 <p>A web page on <a>http://localhost:5000/Home</a> will be opened in a browser after the double click. If the page is not opened, open the browser and type <a>http://localhost:5000/Home</a> in the address field to access the Tippy web UI.</p>
 
 <p><b>Step 3. Create a CKB chain.</b></p>
+<p><b>DEV chain</b> is the recommended network for the later examples and CKB starters. For more information about CKB networks, see <Link to={useBaseUrl('/docs/basics/concepts/ckbNetworks')}>CKB Networks</Link>.</p>
 <p>To create a CKB node on <b>DEV chain</b>, click the <b>Launch a CKB devnet instantly</b> button on the home page.</p>
 
 <img src={useBaseUrl("img/tools/tippycreate.png")}/>
 
+<p>To create a CKB node on the <b>other</b> networks, click <b>Create a customized chain</b> to choose the network in the <b>Chain Type</b> dropdown list of the <b>Create Chain</b> form.</p>
+
 <p>The CKB node starts running just after it is created. It can be stopped or restarted on the Dashboard. Details of blocks and transactions of the chain can be checked on the Blocks and Transaction pages.</p>
 
 <b>Step 4. Shorten DEV chain epoch and block interval.</b>
+
+<p>An epoch is a period of time for a set of blocks. To develop and test transactions with lock period like DAO operations, the <code>genesis_epoch_length</code> and the <code>permanent_difficulty_in_dummy</code> parameters in the <b>dev.toml</b> file can be adjusted to shorten the chain epoch.</p>
+
+<p>The default value for the <code>genesis_epoch_length</code> parameter is 1000 meaning that an epoch is the time for producing 1,000 blocks.</p>
+
+<p>When <code>permanent_difficulty_in_dummy</code> is set to <var>true</var>, all epochs skip the difficulty adjustment. This parameter is typically used in combination with <code>genesis_epoch_length</code>.</p>
+
+:::info
+
+The chain specific configuration files and data files are located in C:/Users/<var>username</var>/AppData/Roaming/Tippy/chain-<var>number</var>. 
+
+:::
 
 <p>To shorten DEV chain epoch and block interval:</p>
 
@@ -223,6 +183,8 @@ permanent_difficulty_in_dummy = true
 ```
 
 </li><li><p>Modify the value for <code>value</code> under the <code>miner.workers</code> section  in the <b>ckb-miner.toml</b> file.</p>
+
+<p>The default mining interval is 5,000 milliseconds (5 seconds). That means a new block is generated at intervals of every 5 seconds.</p>
 
 <p>To modify the value in the [miner.workers] section to generate a new block every second (1,000 milliseconds):</p>
 

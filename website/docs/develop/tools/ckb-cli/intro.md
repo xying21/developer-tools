@@ -1,7 +1,7 @@
 ---
 id: intro
-title: CKB-CLI Introduction
-sidebar_label: CKB-CLI Introduction
+title: CKB-CLI
+sidebar_label: CKB-CLI
 ---
 import useBaseUrl from "@docusaurus/useBaseUrl";
 

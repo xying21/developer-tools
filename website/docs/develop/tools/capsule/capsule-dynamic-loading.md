@@ -1,6 +1,6 @@
 ---
 id: capsule-dynamic-loading-tutorial
-title: Dynamic loading in Capsule
+title: Dynamic Loading in Capsule
 ---
 
 ## Introduction

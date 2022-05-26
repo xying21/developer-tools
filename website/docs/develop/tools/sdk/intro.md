@@ -1,6 +1,6 @@
 ---
 id: intro
-title: Introduction
+title: CKB SDK
 ---
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
@@ -17,8 +17,6 @@ Now CKB SDK is implemented by the following programming languages: JavaScript/Ty
 * [ckb-sdk-java](https://github.com/nervosnetwork/ckb-sdk-java)
 
 * [ckb-sdk-go](https://github.com/ququzone/ckb-sdk-go)
-
-  ckb-sdk-go is an SDK implemented in Golang.
 
 * [ckb-sdk-rust](https://github.com/nervosnetwork/ckb-sdk-rust)
 

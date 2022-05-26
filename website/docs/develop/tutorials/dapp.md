@@ -101,7 +101,7 @@ The account must own enough CKB capacity (33,613.0 CKB) to deploy the NFT script
 
 [ckb-cli](https://github.com/nervosnetwork/ckb-cli) is a command line tool included in the CKB pre-built installer package for debugging CKB in development to facilitate user interaction with CKB.
 
-This guide uses the [CKB 0.103.0](https://github.com/nervosnetwork/ckb/releases/tag/v0.103.0) version. All releases can be found on the [CKB releases](href="https://github.com/nervosnetwork/ckb/releases) page. If the package is already downloaded, go to step 2 directly.
+This guide uses the [CKB 0.103.0](https://github.com/nervosnetwork/ckb/releases/tag/v0.103.0) version. All releases can be found on the [CKB releases](https://github.com/nervosnetwork/ckb/releases) page. If the package is already downloaded, go to step 2 directly.
 
 Download the **.tar.gz** file and unzip it. 
 
@@ -282,7 +282,7 @@ The CKB node and the miner must start running before deploying the NFT script. T
 
 To deploy the NFT script:
 
-1. Update the `[lock]` section in the nft-validator/`deployment.toml` file with the `lock_arg`  of the account that is created in the preparation phase. For more information about creating an account, see <Link to={useBaseUrl('/docs/tools/lumos/preparation/createaccount')}>Create Accounts</Link>.
+1. Update the `[lock]` section in the nft-validator/`deployment.toml` file with the `lock_arg`  of the account that is created in the preparation phase. For more information about creating an account, see <Link to={useBaseUrl('/docs/develop/tutorials/createCKBAccounts#create-the-accounts-by-using-ckb-cli')}>Create the Accounts by Using CKB-CLI</Link>.
 
    :::note
 
@@ -448,12 +448,12 @@ $ tsc
 
 The `index.ts` file under the nft-glue project includes the following operations:
 
-- <Link to={useBaseUrl('/docs/tools/lumos/guides/integratenft#generate-nft-tokens')}>Generate NFT tokens</Link>.
-- <Link to={useBaseUrl('/docs/tools/lumos/guides/integratenft#list-all-live-nft-cells')}>List all live NFT cells</Link>.
-- <Link to={useBaseUrl('/docs/tools/lumos/guides/integratenft#transfer-nft-tokens-from-one-user-to-another-user')}>Transfer NFT tokens from one user to another user</Link>.
-- <Link to={useBaseUrl('/docs/tools/lumos/guides/integratenft#sign-and-seal-the-transaction')}>Sign and seal the transaction</Link>.
+- <Link to={useBaseUrl('/docs/develop/tutorials/dapp#generate-nft-tokens')}>Generate NFT tokens</Link>.
+- <Link to={useBaseUrl('/docs/develop/tutorials/dapp#list-all-live-nft-cells')}>List all live NFT cells</Link>.
+- <Link to={useBaseUrl('/docs/develop/tutorials/dapp#transfer-nft-tokens-from-one-user-to-another-user')}>Transfer NFT tokens from one user to another user</Link>.
+- <Link to={useBaseUrl('/docs/develop/tutorials/dapp#sign-and-seal-the-transaction')}>Sign and seal the transaction</Link>.
 
-Let us check out how the nft-glue project implements these operations by using Lumos. The <Link to={useBaseUrl('/docs/tools/lumos/guides/integratenft#run-the-functions-in-the-nodejs-repl-mode')}>execution</Link> of these operations can be found at the end of this guide.
+Let us check out how the nft-glue project implements these operations by using Lumos. The <Link to={useBaseUrl('/docs/develop/tutorials/dapp#run-the-functions-in-the-nodejs-repl-mode')}>execution</Link> of these operations can be found at the end of this guide.
 
 #### **Generate NFT tokens**
 

@@ -11,7 +11,9 @@
           "basics/concepts/consensus",
           "basics/concepts/economics",
           "basics/concepts/ckb-vm",
-          "basics/concepts/cryptowallet"
+          "basics/concepts/cryptowallet",
+		  "basics/concepts/ckbNetworks",
+		  "basics/concepts/CKBNodes"
 		]
         },
 		{
@@ -21,7 +23,6 @@
           "basics/guides/devchain",
           "basics/guides/mainnet",
           "basics/guides/testnet",
-          "basics/guides/neuron",
           "basics/guides/run-ckb-with-docker",
           "basics/guides/get-ckb",
           "basics/guides/ckb-on-windows",
@@ -39,7 +40,7 @@
         ]
 		},
 		"basics/tools",
-		{"Developer Tools":["develop/tooling",{"CKB-CLI":["develop/tools/ckb-cli/intro","develop/tools/ckb-cli/ckb-cli-account","develop/tools/ckb-cli/ckb-cli-rpc","develop/tools/ckb-cli/ckb-cli-wallet","develop/tools/ckb-cli/ckb-cli-dao","develop/tools/ckb-cli/ckb-cli-tx","develop/tools/ckb-cli/ckb-cli-mock-tx","develop/tools/ckb-cli/ckb-cli-util","develop/tools/ckb-cli/ckb-cli-molecule"]},"develop/tools/lumos/introduction/intro",{"CKB SDK":["develop/tools/sdk/intro","develop/tools/sdk/overview_go","develop/tools/sdk/overview_java"]},{"Capsule":["develop/tools/capsule/intro","develop/tools/capsule/sudtbycapsule","develop/tools/capsule/capsule-dynamic-loading-tutorial"]},"develop/tools/mercury","develop/tools/tippy","develop/tools/ckb-studio","develop/tools/pw-lock","develop/tutorials/dapp"]},
+		{"[New] Developer Tools":["develop/toolsintro","develop/tools/ckb-cli/intro","develop/tools/lumos/intro","develop/tools/sdk/intro","develop/tools/capsule/intro","develop/tools/mercury","develop/tools/tippy","develop/tools/pw-lock",{"Tasks":["develop/tutorials/setupCKBNodes","develop/tutorials/createCKBAccounts","develop/tools/capsule/sudtbycapsule","develop/tools/capsule/capsule-dynamic-loading-tutorial"]},"develop/tutorials/dapp"]},
 		"basics/glossary",
 		{
         "type": "category",

@@ -1,5 +1,5 @@
 ---
-id: tooling
+id: toolsintro
 title: Introduction
 sidebar_label: Introduction
 ---
