@@ -1,6 +1,6 @@
 ---
 id: setupCKBNodes
-title: Set Up and Manage CKB Nodes by Using Tippy
+title: New -- Set Up and Manage CKB Nodes by Using Tippy
 ---
 import useBaseUrl from "@docusaurus/useBaseUrl";
 

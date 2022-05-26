@@ -28,7 +28,7 @@
           "basics/guides/ckb-on-windows",
 		  {
 			"type": "category",
-			"label": "Crypto Wallet",
+			"label": "Crypto Wallet Guides",
 			"items": [
 			  "basics/guides/crypto wallets/neuron",
 			  "basics/guides/crypto wallets/imtoken",
@@ -36,11 +36,13 @@
 			  "basics/guides/crypto wallets/portalwallet",
 			  "basics/guides/crypto wallets/bitpie"
 			]
-		}
+		},
+		"basics/guides/setupCKBNodes",
+		"basics/guides/createCKBAccounts"
         ]
 		},
 		"basics/tools",
-		{"[New] Developer Tools":["develop/toolsintro","develop/tools/ckb-cli/intro","develop/tools/lumos/intro","develop/tools/sdk/intro","develop/tools/capsule/intro","develop/tools/mercury","develop/tools/tippy","develop/tools/pw-lock",{"Tasks":["develop/tutorials/setupCKBNodes","develop/tutorials/createCKBAccounts","develop/tools/capsule/sudtbycapsule","develop/tools/capsule/capsule-dynamic-loading-tutorial"]},"develop/tutorials/dapp"]},
+		{"[New] Developer Tools":["develop/toolsintro","develop/tools/ckb-cli/intro","develop/tools/sdk/intro","develop/tools/capsule/intro","develop/tools/lumos/intro","develop/tools/mercury","develop/tools/tippy","develop/tools/pw-lock","develop/tutorials/dapp"]},
 		"basics/glossary",
 		{
         "type": "category",

@@ -282,7 +282,7 @@ The CKB node and the miner must start running before deploying the NFT script. T
 
 To deploy the NFT script:
 
-1. Update the `[lock]` section in the nft-validator/`deployment.toml` file with the `lock_arg`  of the account that is created in the preparation phase. For more information about creating an account, see <Link to={useBaseUrl('/docs/develop/tutorials/createCKBAccounts#create-the-accounts-by-using-ckb-cli')}>Create the Accounts by Using CKB-CLI</Link>.
+1. Update the `[lock]` section in the nft-validator/`deployment.toml` file with the `lock_arg`  of the account that is created in the preparation phase. For more information about creating an account, see <Link to={useBaseUrl('/docs/basics/guides/createCKBAccounts#create-the-accounts-by-using-ckb-cli')}>Create the Accounts by Using CKB-CLI</Link>.
 
    :::note
 

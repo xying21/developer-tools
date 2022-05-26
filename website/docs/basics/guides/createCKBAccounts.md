@@ -1,6 +1,6 @@
 ---
 id: createCKBAccounts
-title: Create CKB Accounts
+title: New -- Create CKB Accounts
 ---
 
 import useBaseUrl from "@docusaurus/useBaseUrl";
@@ -15,7 +15,7 @@ You can create new accounts when developing your DApps by using the method demon
 
 ## CKB Account
 
-In CKB, an account is represented as a collection of [live cells](https://docs.nervos.org/docs/reference/cell#live-cell) (unspent cells) that contain the same lock script.
+In CKB, an account is represented as a collection of <Link to={useBaseUrl('/docs/reference/cell#live-cell')}>live cells</Link> (unspent cells) that contain the same lock script.
 
 > A live cell refers to an unspent cell in CKB. The concept is similar to that of [UTXO](https://en.wikipedia.org/wiki/Unspent_transaction_output) in Bitcoin's terminology. The full set of live cells in CKB is considered being the full state of CKB at that particular point in time. Any transaction on CKB consumes some live cells. After the transaction is submitted, the live cells become spent cells. Concurrently, some new live cells are created.
 
@@ -136,7 +136,7 @@ If an account seeks to perform transactional actions, such as transferring CKB t
 
 For example, the minimum CKB capacity requirement for a regular transaction is 61 [CKB](https://docs.nervos.org/docs/basics/glossary#shannon "One CKByte is equal to 100,000,000 Shannons.") (6,100,000,000 shannons), and the minimum CKB capacity requirement for a DAO deposit transaction is 102 CKB (10,200,000,000 shannons).
 
-Accounts on Testnet can request CKB capacity on [https://faucet.nervos.org](https://faucet.nervos.org/). Accounts on DEV chain can obtain CKB capacity by mining blocks as miners. For more information about getting CKB capacity on DEV chain, see **<Link to={useBaseUrl('/docs/develop/tutorials/createCKBAccounts#step-5-get-ckb-capacity-for-the-account-of-alice')}>step 5</Link>**.
+Accounts on Testnet can request CKB capacity on [https://faucet.nervos.org](https://faucet.nervos.org/). Accounts on DEV chain can obtain CKB capacity by mining blocks as miners. For more information about getting CKB capacity on DEV chain, see **<Link to={useBaseUrl('/docs/basics/guides/createCKBAccounts#step-5-get-ckb-capacity-for-the-account-of-alice')}>step 5</Link>**.
 
 :::
 

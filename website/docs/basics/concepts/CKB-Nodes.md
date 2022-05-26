@@ -18,7 +18,7 @@ There are two options for installing a CKB node:
 
 - **Install a CKB Node by Using Tippy**
 
-  For more information, see <Link to={useBaseUrl('/docs/develop/tutorials/setupCKBNodes')}>Set Up and Manage CKB Nodes by Using Tippy</Link>.
+  For more information, see <Link to={useBaseUrl('/docs/basics/guides/setupCKBNodes')}>Set Up and Manage CKB Nodes by Using Tippy</Link>.
 
 - **Install a CKB Node by Using the Pre-built Installer Package**
 
